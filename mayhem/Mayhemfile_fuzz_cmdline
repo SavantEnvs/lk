@@ -1,0 +1,9 @@
+project: savantenvs/lk
+target: fuzz_cmdline
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_cmdline/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_cmdline
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/fuzz_cmdline/fuzz_cmdline.dict
